@@ -1,0 +1,27 @@
+@use '../bases/variables' as *;
+
+footer {
+    background-color: $BgColor;
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+
+    article {
+        width: calc(100%/3);
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .title {
+                @include subTitleTxt;
+                font-size: 18px;
+            }
+
+            li {
+                @include smallTxt;
+            }
+        }
+    }
+}

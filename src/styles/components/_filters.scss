@@ -1,0 +1,28 @@
+@use '../bases/variables' as *;
+
+.filter {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 50px;
+}
+
+.choice {
+    padding: 4px 19px;
+    border: 2px solid $BgColor;
+    border-radius: 25px;
+    display: flex;
+    gap: 10px;
+    height: 100%;
+    align-items: center;
+
+    h2 {
+        font-size: 17px;
+        font-weight: 700;
+    }
+
+    &:hover {
+        background-color: $secondaryColor;
+    }
+}

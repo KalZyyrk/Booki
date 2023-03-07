@@ -1,0 +1,41 @@
+@use '../bases/variables' as *;
+
+.activities {
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+
+    h1 {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .list {
+        display: flex;
+        gap: 30px;
+
+        .cart {
+            width: 35%;
+            height: 439px;
+            overflow: hidden;
+            border-radius: 20px;
+            @include boxShadow;
+
+            &-img {
+                height: 380px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &-name {
+                padding: 20px;
+            }
+        }
+    }
+
+}

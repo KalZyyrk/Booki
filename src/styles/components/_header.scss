@@ -1,0 +1,34 @@
+@use '../bases/variables' as *;
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 79px;
+
+    .main-logo {
+        padding: 30px;
+
+        img {
+            height: 19px;
+        }
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 329px;
+        height: 35px;
+        padding: 0 25px;
+
+        .nav-button {
+            padding-top: 15px;
+            text-align: center;
+
+            &:hover {
+                color: $mainColor;
+                border-top: 2px solid $mainColor;
+            }
+        }
+    }
+}

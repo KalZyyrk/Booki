@@ -1,0 +1,47 @@
+@use '../bases/variables' as *;
+
+.search {
+    margin-top: 35px;
+    height: 49px;
+    border: 1px solid $BgColor;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 377px;
+
+    &-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        background-color: $BgColor;
+        height: 100%;
+        box-sizing: content-box;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+
+        img {
+            height: 18px;
+            width: 14px;
+        }
+    }
+
+    p {
+        @include subTitleTxt;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        align-self: center;
+    }
+
+    button {
+        width: 132px;
+        background-color: $mainColor;
+        color: white;
+        border: none;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        font-size: 18px;
+        text-align: center;
+    }
+}
