@@ -6,6 +6,11 @@
     flex-wrap: wrap;
     padding: 30px;
 
+    @media (width < $tabletScreenMinWidth) {
+        margin-top: 0;
+    }
+
+
     h1 {
         width: 100%;
         margin-bottom: 30px;
@@ -15,6 +20,14 @@
         display: flex;
         gap: 30px;
 
+        @media (width < $tabletScreenMinWidth) {
+            flex-direction: column;
+        }
+
+        @media (width < $tabletScreenMinWidth) {
+            gap: 15px;
+        }
+
         .cart {
             width: 35%;
             height: 439px;
@@ -22,8 +35,21 @@
             border-radius: 20px;
             @include boxShadow;
 
+            @media (width <=$tabletScreenMaxWidth) {
+                height: 270px;
+            }
+
+            @media (width < $tabletScreenMinWidth) {
+                height: 200 px;
+                width: auto;
+            }
+
             &-img {
                 height: 380px;
+
+                @media (width <=$tabletScreenMaxWidth) {
+                    height: 200px;
+                }
 
                 img {
                     width: 100%;

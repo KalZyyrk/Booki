@@ -9,6 +9,10 @@
     justify-content: space-between;
     width: 377px;
 
+    @media (width < $tabletScreenMinWidth) {
+        width: 100%;
+    }
+
     &-icon {
         display: flex;
         justify-content: center;
@@ -34,6 +38,7 @@
         align-self: center;
     }
 
+
     button {
         width: 132px;
         background-color: $mainColor;
@@ -43,5 +48,27 @@
         border-bottom-right-radius: 15px;
         font-size: 18px;
         text-align: center;
+
+        span {
+            color: white;
+
+            @media (width < $tabletScreenMinWidth) {
+                display: none;
+            }
+        }
+
+        svg {
+            display: none;
+
+            @media (width < $tabletScreenMinWidth) {
+                display: initial;
+                color: white;
+            }
+        }
+
+        @media (width < $tabletScreenMinWidth) {
+            border-radius: 15px;
+            width: 49px;
+        }
     }
 }

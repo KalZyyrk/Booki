@@ -6,6 +6,15 @@
     justify-content: space-between;
     gap: 40px;
 
+    @media (width <=$tabletScreenMaxWidth) {
+        flex-direction: column;
+    }
+
+    @media (width < $tabletScreenMinWidth) {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
     article {
         background-color: $BgColor;
     }
@@ -17,8 +26,19 @@
         gap: 30px;
         border-radius: 15px;
 
+        @media (width < $tabletScreenMinWidth) {
+            background-color: white;
+            padding: 20px;
+            gap: 15px;
+            flex-direction: column;
+        }
+
         h1 {
             @include titleTxt;
+            width: 100%;
+        }
+
+        h2 {
             width: 100%;
         }
 
@@ -26,11 +46,15 @@
             background-color: white;
             border-radius: 20px;
             width: 30%;
-            height: 207.25px;
             overflow: hidden;
             border: 5px solid white;
             justify-content: center;
             @include boxShadow;
+
+            @media (width < $tabletScreenMinWidth) {
+                width: auto;
+            }
+
 
             &-image {
                 overflow: hidden;
@@ -78,6 +102,20 @@
         flex-direction: column;
         gap: 30px;
 
+        @media (width <=$tabletScreenMaxWidth) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media (width < $tabletScreenMinWidth) {
+            flex-direction: column;
+            padding: 30px 20px;
+            min-width: 0;
+            border-radius: 0;
+            gap: 15px;
+        }
+
         &-title {
             width: 100%;
             display: flex;
@@ -98,11 +136,28 @@
             overflow: hidden;
             @include boxShadow;
 
+            @media (width <=$tabletScreenMaxWidth) {
+                width: 30%;
+                height: 144px;
+            }
+
+            @media (width < $tabletScreenMinWidth) {
+                width: auto;
+            }
+
 
             &-image {
                 overflow: hidden;
                 width: 123px;
                 height: 144px;
+
+                @media ($tabletScreenMinWidth <=width <=$tabletScreenMaxWidth) {
+                    width: 30%;
+                }
+
+                @media (width < $tabletScreenMinWidth) {
+                    min-width: 144px;
+                }
 
                 img {
                     width: 100%;
@@ -119,8 +174,13 @@
                 padding: 10px;
                 justify-content: space-between;
 
+                @media ($tabletScreenMinWidth <=width <=$tabletScreenMaxWidth) {
+                    width: 65%;
+                }
+
                 p {
                     margin-top: 5px;
+                    font-size: 14px;
                 }
 
                 .rating {

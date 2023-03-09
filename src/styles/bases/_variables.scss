@@ -25,3 +25,7 @@ $BgColor: #F2F2F2;
 @mixin boxShadow() {
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
 }
+
+// Breakpoint
+$tabletScreenMaxWidth: 1024px;
+$tabletScreenMinWidth: 768px;

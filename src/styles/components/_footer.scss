@@ -6,8 +6,19 @@ footer {
     align-items: flex-start;
     padding: 20px;
 
+    @media (width < $tabletScreenMinWidth) {
+        flex-direction: column;
+        padding: 30px;
+        gap: 50px;
+    }
+
     article {
         width: calc(100%/3);
+
+        @media (width < $tabletScreenMinWidth) {
+            gap: 15px;
+            width: auto;
+        }
 
         ul {
             display: flex;
