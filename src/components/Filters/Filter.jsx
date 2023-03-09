@@ -1,16 +1,19 @@
 import React from 'react';
 import FilterChoice from './FilterChoice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFire, faHeart, faMoneyBillWave, faPaperclip, faPerson } from '@fortawesome/free-solid-svg-icons';
+import data from '../../data/filterData.json'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fas)
 
 const Filter = () => {
     return (
         <div className='filter'>
             <h1>Filtres</h1>
-            <FilterChoice name='Économique' icon={<FontAwesomeIcon icon={faMoneyBillWave} />} />
-            <FilterChoice name='Familial' icon={<FontAwesomeIcon icon={faPerson} />} />
-            <FilterChoice name='Romantique' icon={<FontAwesomeIcon icon={faHeart} />} />
-            <FilterChoice name='Nos pépites' icon={<FontAwesomeIcon icon={faFire} />} />
+            {data.map(filter =>
+                <FilterChoice key={filter.name} name={filter.name} icon={<FontAwesomeIcon icon={filter.icon} />} />
+            )}
         </div>
     );
 }
